@@ -20,7 +20,7 @@ const artistMeta = {
   },
   Florencia: {
     subtitle: 'Fine Line · Blackwork · Color',
-    avatar: 'https://plus.unsplash.com/premium_photo-1707057705919-7e5b8512dfe4?q=80&w=200&auto=format&fit=crop',
+    avatar: 'https://res.cloudinary.com/dcane5hbu/image/upload/f_auto,q_auto,w_1000/v1773935373/IMG_5956_nimjk4.heic',
   },
 }
 
