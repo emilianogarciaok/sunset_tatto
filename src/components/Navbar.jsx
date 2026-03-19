@@ -34,7 +34,16 @@ export default function Navbar() {
         scrolled ? 'bg-black/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}
     >
-      {/* Left nav links */}
+      {/* Logo */}
+      <a href="#home" onClick={(e) => scrollTo(e, '#home')} className="flex-shrink-0">
+        <img
+          src="https://res.cloudinary.com/dcane5hbu/image/upload/f_auto,q_auto,w_300/v1773946280/logoo_liiruz.jpg"
+          alt="Sunset Tattoo"
+          className="h-10 w-auto rounded-full"
+        />
+      </a>
+
+      {/* Nav links */}
       <ul className="hidden md:flex items-center gap-8 text-[11px] font-medium tracking-[2.5px] uppercase">
         {links.map((link, i) => (
           <motion.li

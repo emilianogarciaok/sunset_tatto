@@ -3,12 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const slides = [
   {
-    image: 'https://images.unsplash.com/photo-1651216829774-2fe92d410292?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D  ',
-    subtitle: 'Fine line| Blackwork| Color',
-    title: 'SUNSET TATTOO',
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1759247943688-5d47a84dd615?q=80&w=1494&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: 'https://res.cloudinary.com/dcane5hbu/image/upload/f_auto,q_auto:good,w_2000/v1773945783/hero_rfx6qm.jpg',
     subtitle: 'Oriental| Realism| Full Color',
     title: 'SUNSET TATTOO',
   },
@@ -41,52 +36,91 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-6">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={current}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.12 } },
+          }}
+          className="flex flex-col items-center max-w-2xl"
+        >
+          <motion.p
             variants={{
-              hidden: {},
-              visible: { transition: { staggerChildren: 0.15 } },
-              exit: {},
+              hidden: { opacity: 0, y: 15 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
             }}
-            className="flex flex-col items-center"
+            className="text-xs tracking-[4px] uppercase mb-3 font-light text-white/90"
           >
-            <motion.p
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-                exit: { opacity: 0, y: -10, transition: { duration: 0.3 } },
-              }}
-              className="text-sm tracking-[3px] uppercase mb-4 font-light"
-            >
-              {slide.subtitle}
-            </motion.p>
-            <motion.h1
-              variants={{
-                hidden: { opacity: 0, y: 40, scale: 0.95 },
-                visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.7, ease: 'easeOut' } },
-                exit: { opacity: 0, y: -20, transition: { duration: 0.3 } },
-              }}
-              className="text-6xl md:text-8xl lg:text-9xl font-bold uppercase leading-none mb-6 tracking-wide"
-            >
-              {slide.title}
-            </motion.h1>
-            <motion.a
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-                exit: { opacity: 0, transition: { duration: 0.2 } },
-              }}
-              href="#artistas"
-              className="border border-white px-8 py-6 text-[11px] font-medium tracking-[3px] uppercase hover:bg-white hover:text-black transition-colors"
-            >
-              View Artists
-            </motion.a>
-          </motion.div>
-        </AnimatePresence>
+            Welcome to
+          </motion.p>
+          <motion.h1
+            variants={{
+              hidden: { opacity: 0, y: 30, scale: 0.95 },
+              visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.7, ease: 'easeOut' } },
+            }}
+            className="text-4xl md:text-6xl lg:text-7xl font-bold uppercase leading-none mb-2 tracking-wide"
+          >
+            Sunset Tattoo
+          </motion.h1>
+          <motion.p
+            variants={{
+              hidden: { opacity: 0, y: 15 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+            }}
+            className="text-sm md:text-base tracking-[3px] uppercase mb-6 font-light text-white/80"
+          >
+            Estúdio PT.
+          </motion.p>
+
+          <motion.div
+            variants={{
+              hidden: { scaleX: 0 },
+              visible: { scaleX: 1, transition: { duration: 0.8 } },
+            }}
+            className="w-16 h-px bg-white/30 mb-6"
+          />
+
+          <motion.p
+            variants={{
+              hidden: { opacity: 0, y: 15 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
+            }}
+            className="text-white/80 text-xs md:text-sm leading-relaxed mb-4 font-light"
+          >
+            We are a space dedicated to creating fine, custom tattoos in Portugal. We believe that precision and delicacy are the keys to a timeless piece. At our studio, every line tells a story, and every design is a unique collaboration between artist and client.
+          </motion.p>
+
+          <motion.p
+            variants={{
+              hidden: { opacity: 0, y: 15 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
+            }}
+            className="text-white/80 text-xs md:text-sm leading-relaxed mb-4 font-light"
+          >
+            We invite you to immerse yourself in an environment designed for calm. Come enjoy our views and a moment dedicated exclusively to you, in a space where comfort and art meet.
+          </motion.p>
+
+          <motion.p
+            variants={{
+              hidden: { opacity: 0, y: 15 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
+            }}
+            className="text-white/75 text-xs md:text-sm leading-relaxed italic mb-5 font-light"
+          >
+            Let Flor or Agus transform your vision into reality while you enjoy the Sunset experience.
+          </motion.p>
+
+          <motion.p
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1, transition: { duration: 0.6 } },
+            }}
+            className="text-white/85 text-xs tracking-[2px] mb-8 font-light"
+          >
+            Your next tattoo starts here. ✨
+          </motion.p>
+        </motion.div>
       </div>
 
       {/* Left arrow */}
