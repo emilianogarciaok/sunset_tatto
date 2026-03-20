@@ -5,7 +5,6 @@ import Gallery from './components/Gallery'
 import Artists from './components/Artists'
 import Cta from './components/Cta'
 import Location from './components/Location'
-import WhatsappButton from './components/WhatsappButton'
 import Footer from './components/Footer'
 
 export default function App() {
@@ -21,7 +20,6 @@ export default function App() {
         <Location />
       </main>
       <Footer />
-      <WhatsappButton />
     </div>
   )
 }

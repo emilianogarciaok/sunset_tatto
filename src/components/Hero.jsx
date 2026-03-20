@@ -7,6 +7,21 @@ const slides = [
     subtitle: 'Oriental| Realism| Full Color',
     title: 'SUNSET TATTOO',
   },
+    {
+    image: 'https://res.cloudinary.com/dcane5hbu/image/upload/f_auto,q_auto,w_1000/v1773953677/WhatsApp_Image_2026-03-19_at_5.42.06_PM_1_gfzhyy.jpg',
+    subtitle: 'Oriental| Realism| Full Color',
+    title: 'SUNSET TATTOO',
+  },
+    {
+    image: 'https://res.cloudinary.com/dcane5hbu/image/upload/f_auto,q_auto,w_1000/v1773953677/WhatsApp_Image_2026-03-19_at_5.42.06_PM_2_qfb1pu.jpg',
+    subtitle: 'Oriental| Realism| Full Color',
+    title: 'SUNSET TATTOO',
+  },
+    {
+    image: 'https://res.cloudinary.com/dcane5hbu/image/upload/f_auto,q_auto,w_1000/v1773953675/WhatsApp_Image_2026-03-19_at_5.42.06_PM_svyydm.jpg',
+    subtitle: 'Oriental| Realism| Full Color',
+    title: 'SUNSET TATTOO',
+  },
 ]
 
 export default function Hero() {
